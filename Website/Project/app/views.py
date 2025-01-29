@@ -10,3 +10,9 @@ class HomeView(TemplateView):
 
 class ContactView(TemplateView):
     template_name =  'app/contact.html'
+
+class LOGINPAGEView(TemplateView):
+    template_name =  'app/LOGINPAGE.html'
+
+class SIGNUPPAGEView(TemplateView):
+    template_name =  'app/SIGNUPPAGE.html'
