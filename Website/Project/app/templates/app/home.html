@@ -1,0 +1,25 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block content %}
+    <img class="imageBody" src="{% static 'images/welcomePageImage.jpg' %}">
+
+    <div class="homeBodyTextBox">
+        <center><h1>Welcome</h1></center>
+        <p>This is the official website of Our clinic and here you can make appointments.
+        The purpose of this website is to help people book appointments easily. We’re dedicated to making healthcare easier for you.
+            With our user-friendly platform, booking your next appointment is quick, simple, and stress-free.
+            Whether it's a routine check-up or a specialist visit, we're here to help you stay on top of your health with just a few clicks.
+            Your well-being is our priority, and we're here to make your healthcare experience seamless and efficient.
+        </p>
+
+        <p> To book an appointment, you must have an account:</p>
+
+        <center>
+        <button> Log In</button>
+        <button> Sign Up</button>
+        </center>
+
+    </div>
+
+{% endblock content %}

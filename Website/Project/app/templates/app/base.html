@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HealthCare Clinic Online</title>
+
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+
+</head>
+<body>
+  <nav>
+    <div class="navTitle">Healthcare Clinic Online Booking</div>
+    <ul class="navLinks">
+      <li> <a href="{% url 'home' %}">Home</a> </li>
+      <li> <a href="{% url 'contact' %}">Contact Us</a> </li>
+    </ul>
+  </nav>
+
+
+  {% block content %}
+
+  {% endblock content %}
+</body>
+</html>

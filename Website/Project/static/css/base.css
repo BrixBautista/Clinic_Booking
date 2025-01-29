@@ -1,0 +1,82 @@
+body, ul{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #1a9cb8;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    padding: 10px 20px;
+    background-color: #2A9D8F;
+    border: 1px solid black;
+}
+
+.navTitle{
+    font-size: 1.5rem;
+    font-weight: bold;
+
+}
+
+.navLinks{
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+
+}
+
+.navLinks a{
+    text-decoration: none;
+    font-size: 1rem;
+    color: black;
+    font-weight: bold;
+}
+
+.navLinks a:hover {
+    color: white;
+}
+
+.imageBody{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: -100;
+}
+
+.contactDetails{
+    font-size: 30px;
+}
+
+.contactH2{
+    font-size: 40px;
+}
+
+.contactH1{
+    font-size: 50px;
+}
+
+.homeBodyTextBox{
+    background-color: #1a9cb8;
+    width: 90vw;
+    height: 500px;
+
+    position: relative;
+    top: 10px;
+    left: 50px;
+    opacity: 90%;
+}
+
+.homeBodyTextBox p{
+    font-size: 30px;
+}
+
+.homeBodyTextBox h1{
+    font-size: 50px;
+}
