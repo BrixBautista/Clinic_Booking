@@ -14,6 +14,12 @@
     <ul class="navLinks">
       <li> <a href="{% url 'home' %}">Home</a> </li>
       <li> <a href="{% url 'contact' %}">Contact Us</a> </li>
+        {% if user.is_authenticated %}
+        <!-- Show these links only when the user is logged in -->
+        <li> <a href="{% url 'UserPage' %}">Account</a> </li>
+        <li> <a href="{% url 'appointments' %}">Appointments</a> </li>
+      {% endif %}
+
     </ul>
   </nav>
 
@@ -21,5 +27,16 @@
   {% block content %}
 
   {% endblock content %}
+
+<footer>
+    {% if user.is_authenticated %}
+        <form method="POST" action="{% url 'logout' %}">
+            {% csrf_token %}
+            <center>
+            <button type="submit">Log Out</button>  <!-- Log out button -->
+            </center>
+        </form>
+    {% endif %}
+</footer>
 </body>
 </html>

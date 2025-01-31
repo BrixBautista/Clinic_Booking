@@ -13,11 +13,14 @@
             Your well-being is our priority, and we're here to make your healthcare experience seamless and efficient.
         </p>
 
-        <p> To book an appointment, you must have an account:</p>
+        <p> To book an appointment, you must have an account.</p>
 
         <center>
-        <button> Log In</button>
-        <button> Sign Up</button>
+            {% if not user.is_authenticated %}
+                <!-- Show these buttons only if the user is not logged in -->
+                <button onclick="location.href='{% url 'LOGINPAGE' %}'" style="width: 200px; height: 50px; margin-right: 20px; font-size: 20px;"> Log In</button>
+                <button onclick="location.href='{% url 'SIGNUPPAGE' %}'" style="width: 200px; height: 50px; font-size: 20px;"> Sign Up</button>
+            {% endif %}
         </center>
 
     </div>

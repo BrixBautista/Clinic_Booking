@@ -1,0 +1,26 @@
+{% extends 'app/base.html' %}
+{% block content %}
+    <div class="user-account">
+        <h2>User Account</h2>
+
+        <!-- Display current user details -->
+        <p><strong>Username:</strong> {{ user.username }}</p>
+        <p><strong>Email:</strong> {{ user.email }}</p>
+        <p><strong>Full Name:</strong> {{ user.first_name }} {{ user.last_name }}</p>
+
+        <!-- Edit profile form -->
+        <h3>Edit Profile</h3>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" name="edit">Save Changes</button>
+        </form>
+
+        <!-- Form to delete user account -->
+        <h3>Delete Account</h3>
+        <form method="post" onsubmit="return confirm('Are you sure you want to delete your account? This cannot be undone.')">
+            {% csrf_token %}
+            <button type="submit" name="delete" style="color: red;">Delete Account</button>
+        </form>
+    </div>
+{% endblock %}
